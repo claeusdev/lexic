@@ -9,17 +9,11 @@ import (
 )
 
 func main() {
-	// get started here
-
-	// define boolean flag -l to count lines instead of words
 
 	lines := flag.Bool("l", false, "Count lines")
 	totalBytes := flag.Bool("b", false, "Count bytes")
 
 	flag.Parse()
-
-	// count the number of words received from stdin
-	// print to console
 
 	fmt.Println(count(os.Stdin, *lines, *totalBytes))
 }
