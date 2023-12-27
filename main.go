@@ -25,10 +25,7 @@ func main() {
 }
 
 func count(r io.Reader, countLines bool, countBytes bool) int {
-	// read text from Reader
 	scanner := bufio.NewScanner(r)
-
-	// split by words insteead of by lines
 
 	if countBytes {
 		scanner.Split(bufio.ScanBytes)
@@ -38,7 +35,6 @@ func count(r io.Reader, countLines bool, countBytes bool) int {
 		scanner.Split(bufio.ScanWords)
 	}
 
-	// start counting
 	wordCount := 0
 
 	for scanner.Scan() {
